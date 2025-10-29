@@ -38,20 +38,31 @@ export default function CategoryPage() {
 
   return (
     <div className={styles.container}>
-        {categoryProducts.length === 0 ? (
-          <p>No products found in this category.</p>
-        ) : (
-          categoryProducts.map((p) => (
-            <Product
-              key={p.id}
-              image={p.image}
-              title={p.title}
-              description={p.description}
-              category={p.category}
-              price={p.price}
-            />
-          ))
-        )}
+      {categoryProducts.length === 0 ? (
+        <p>No products found in this category.</p>
+      ) : (
+        categoryProducts.map((p) => (
+          // <Product
+          //   key={p.id}
+          //   image={p.image}
+          //   title={p.title}
+          //   description={p.description}
+          //   category={p.category}
+          //   price={p.price}
+          // />
+          <Product
+            key={p.id}
+            id={p.id}             // <-- שדה חסר
+            image={p.image}
+            title={p.title}
+            description={p.description}
+            category={p.category}
+            price={p.price}
+            rating={p.rating}     // <-- שדה חסר
+          />
+
+        ))
+      )}
     </div>
   );
 }
