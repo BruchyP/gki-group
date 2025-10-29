@@ -1,10 +1,16 @@
 .header {
-    background-color: #000000;
+    background-color: white;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    border: 2px solid black; /* מסגרת שחורה */
+    box-sizing: border-box;
+}
+.logo {
+    height: 50px; /* גובה הלוגו */
+    width: auto;
 }
 
 .nav {
@@ -14,31 +20,27 @@
 }
 
 .link {
-    color: #FFD700;
+    color: #000000;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
-.link:hover {
-    color: white;
+.activeLink {
+    color: rgb(184, 184, 23); /* הקטגוריה הנוכחית צהוב */
 }
 
 .cart {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #FFD700;
+    color: #000000;
     cursor: pointer;
     background: none;
     border: none;
     font-size: 1rem;
     padding: 8px 16px;
     transition: color 0.3s ease;
-}
-
-.cart:hover {
-    color: white;
 }
 
 .cartModal {
@@ -54,11 +56,4 @@
     max-height: 80vh;
     overflow-y: auto;
     margin-top: 10px;
-}
-
-.logo {
-    font-size: 1.5rem;
-    color: #FFD700;
-    text-decoration: none;
-    font-weight: bold;
 }
