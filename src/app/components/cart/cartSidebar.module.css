@@ -1,0 +1,134 @@
+/* overlay כהה ברקע */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+/* חלון הסל במרכז המסך */
+.sidebar {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 400px;
+  max-width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 12px;
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* כותרת עם כפתור סגירה */
+.header {
+  position: relative;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  text-align: center; /* מרכז את הטקסט */
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.header button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* כל פריט בסל */
+.cartItem {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.cartItem img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* כפתורי כמות */
+.cartItem div div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cartItem button {
+  padding: 4px 8px;
+  border: none;
+  background: #f0f0f0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cartItem button:hover {
+  background: #ddd;
+}
+
+/* סה"כ וסיום */
+p.total {
+  font-weight: bold;
+  text-align: center; /* מרכז את הטקסט */
+  margin-top: 10px;
+  background-color: #ffc107; /* רקע צהוב */
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* כפתורים בתחתית */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.actions button {
+  padding: 8px 15px;
+  border: none;
+  background: #ffc107;
+  color: #000;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.actions button:hover {
+  background: #e6b800;
+}
+
+.actions a {
+  text-decoration: none;
+  padding: 8px 15px;
+  background: #28a745;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.actions a:hover {
+  background: #218838;
+}

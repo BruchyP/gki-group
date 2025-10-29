@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from './header.module.css';
 import { usePathname } from 'next/navigation';
 import { useCartStore } from '../../store/cartStore'; // עדכני לפי הנתיב שלך
+import CartSidebar from '../cart/cartSidebar';
 
 const Header = () => {
   const pathname = usePathname();
@@ -49,6 +50,7 @@ const Header = () => {
       <Link href="/cart" className={styles.cart}>
         CART {totalItems > 0 && <span className={styles.cartCount}>({totalItems})</span>}
       </Link>
+            <CartSidebar />
     </header>
   );
 };
